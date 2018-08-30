@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: webecho-container
-        image: registry.hundsun.com/hcs/web_echo:1.0.0
+        image: registry.hundsun.com/hcs/web_echo:0.1
         ports:
         - containerPort: 8080
           name: webecho-port
