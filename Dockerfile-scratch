@@ -1,6 +1,5 @@
 FROM scratch
 
 COPY web_echo /
-EXPOSE 8080
 
 CMD ["/web_echo"]

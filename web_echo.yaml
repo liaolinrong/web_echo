@@ -9,8 +9,8 @@ spec:
   type: NodePort
   ports:
   - name: webecho-port
-    port: 8080
-    nodePort: 30087
+    port: 8123
+    nodePort: 38123
   selector:
     name: webecho
 ---
@@ -31,6 +31,9 @@ spec:
       containers:
       - name: webecho-container
         image: registry.hundsun.com/hcs/web_echo:0.1
+        env:
+        - name: LISTEN_PORT
+          value: "8123"
         ports:
-        - containerPort: 8080
+        - containerPort: 8123
           name: webecho-port
